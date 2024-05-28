@@ -1,5 +1,5 @@
 import { printGraph } from "./graph.helpers";
-import type { GraphInterface, NodeMap } from "./graph.interface";
+import type { GraphInterface } from "./graph.interface";
 
 // const graph = new Graph();
 declare const graph: GraphInterface;
@@ -7,7 +7,7 @@ declare const graph: GraphInterface;
 graph
 	.addNode(
 		{id: 'boris', deps: ['berte']},
-		{id: 'berte', deps: []}
+		{id: 'berte'}
 	)
 	.addNode(
 		{id: 'bob', deps: ['boris', 'berte']}

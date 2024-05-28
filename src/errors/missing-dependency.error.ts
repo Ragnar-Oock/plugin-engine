@@ -1,7 +1,7 @@
 import { GraphInterface, NodeId } from "../graph.interface";
 
 export default class MissingDependencyError extends Error {
-	constructor(nodeId: NodeId, dependencies: NodeId[], graph: GraphInterface) {
+	constructor(nodeId: NodeId, dependencies: ReadonlyArray<NodeId>, graph: GraphInterface) {
 		const missingDeps = dependencies.filter(dep => graph.nodeList.has(dep));
 		const nbDeps = missingDeps.length;
 		const message = nbDeps === 1
